@@ -1,1 +1,27 @@
+server:
+  port: ${PORT:8864}
 
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8850/eureka/
+
+message: Configuracion del usuario en el servidor levantado!
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ustaycloud?serverTimezone=UTC
+    username: root
+    password: 12345678
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      database-platform: org.hibernate.dialect.MySQLDialect
+
+cloud:
+  config:
+    url: http://localhost:8860
