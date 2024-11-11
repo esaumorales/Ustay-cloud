@@ -1,11 +1,11 @@
 server:
   port: ${PORT:8861}
 
-eureka:
-  client:
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:8850/eureka/
+#eureka:
+ # client:
+  #  register-with-eureka: true
+   # service-url:
+    #  defaultZone: http://localhost:8850/eureka/
 
 message: Configuracion del usuario en el servidor levantado!
 
