@@ -1,13 +1,13 @@
 server:
   port: ${PORT:8861}
 
-#eureka:
- # client:
-  #  register-with-eureka: true
-   # service-url:
-    #  defaultZone: http://localhost:8850/eureka/
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8850/eureka/
 
-message: Configuracion del usuario en el servidor levantado!
+message: "Configuracion del usuario en el servidor levantado!"
 
 spring:
   datasource:
@@ -20,8 +20,8 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-      database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.MySQLDialect
 
 cloud:
   config:
-    url: http://localhost:8860
+    uri: http://localhost:8860
